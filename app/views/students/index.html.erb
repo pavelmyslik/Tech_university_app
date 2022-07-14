@@ -1,0 +1,26 @@
+<div class="row mt-4">
+  <div class="col-12"><h2 class="text-center">Student Listing</h2></div>
+</div>
+
+<div class="container text-center">
+  <div class="row justify-content-center">
+    <% @students.each do |student| %>
+      <div class="col mt-4">
+        <div class="card" style="width: 25rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%= student.name %></h5>
+            <h6 class="card-subtitle mb-2"><em>Email: <%= student.email %></em></h6>
+            <p>Course Enrollments: None</p>
+            <hr/>
+            <%= link_to student_path(student), class: "card-link" do %>
+              <%= fa_icon 'eye' %> View profile
+            <%end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+

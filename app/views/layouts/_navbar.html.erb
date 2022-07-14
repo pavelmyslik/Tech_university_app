@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "COURSES", root_path, class: "nav-link active" %>
+        </li>
+        <% if logged_in? %>
+          <li class="nav-item">
+            <%= link_to "Students", students_path, class: "nav-link" %>
+          </li>
+        <% end %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <% if logged_in? %>
+              <li><%= link_to "Profile", student_path(current_user), class: "dropdown-item" %></li>
+              <li><%= button_to "Logout", logout_path, method: :delete, class: "dropdown-item" %></li>
+            <% else %>
+              <li><%= link_to "Login", login_path, class: "dropdown-item" %></li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <a class="navbar-brand" href="#">Tech University</a>
+      </form>
+    </div>
+  </div>
+</nav>

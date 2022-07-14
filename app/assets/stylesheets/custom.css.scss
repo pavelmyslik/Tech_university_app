@@ -1,0 +1,55 @@
+.navbar {
+  background-color: #e35050 !important;
+  color: #DADADA !important;
+}
+
+.footer {
+  background-color: #e35050 !important;
+}
+
+.card {
+  background-color: #566C7B;
+  color: white;
+  font-family: Arial;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #F8AC56;
+}
+
+.card-link:hover {
+  color: #f1ba87;
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+}
+.card-registration .select-arrow {
+  top: 13px;
+}
+
+#btn1 {
+  background-color: #e35050;
+  border-radius: 25px;
+  border-color: #e35050;
+}
+
+
+#btn1:hover {
+  color: #e35050;
+  background-color: white;
+}
+
+.err {
+  background-color: #e35050;
+  color: #DADADA;
+}
+
+.enroll-butt {
+  background-color: #566C7B !important;
+  border: none;
+}
